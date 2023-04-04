@@ -63,11 +63,11 @@ home_mailbox = Maildir/
 
 or run : sudo postconf -e 'home_mailbox= Maildir\'
 
-________-------------_______________
+_________----------------------------------_______________
 
 
 
-
+Fonte : https://www.youtube.com/watch?v=P5NeyiRPYiY&t=68s
 
 
 
