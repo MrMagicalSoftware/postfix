@@ -53,6 +53,17 @@ test send mail
 Press ctrl d  to send
 
 
+How to prevent spam folder :
+
+sudo nano /etc/postfix/main.cf
+
+Add this line :
+
+home_mailbox = Maildir/
+
+or run : sudo postconf -e 'home_mailbox= Maildir\'
+
+________-------------_______________
 
 
 
