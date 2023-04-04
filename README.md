@@ -45,7 +45,12 @@ apt install mailutils
 
 
 
+Test email server :
 
+/usr/sbin/sendmail ricevente@gmail.com (press enter)
+test send mail
+
+Press ctrl d  to send
 
 
 
