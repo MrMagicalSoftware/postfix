@@ -66,10 +66,22 @@ or run : sudo postconf -e 'home_mailbox= Maildir\'
 _________----------------------------------_______________
 
 
+DOVECOT
+
+_________________________________________________________
 
 Fonte : https://www.youtube.com/watch?v=P5NeyiRPYiY&t=68s
 
+sudo apt-get install dovecot-imapd dovecot-pop3d
+sudo systemctl restart dovecot
+nano /etc/dovecot/dovecot.conf
+add this line :
 
+portocols = pop3 pop3s imap imaps
+
+____________________________________________
+
+port di imap : 995
 
 
 
