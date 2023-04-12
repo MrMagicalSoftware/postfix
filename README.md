@@ -85,7 +85,53 @@ port di imap : 995
 
 
 
+# Dovecot
 
+
+To install Dovecot on Ubuntu server, follow these steps:
+
+    Update the package list:
+
+    sudo apt update
+
+    Install Dovecot and the necessary dependencies:
+
+    sudo apt install dovecot-core dovecot-imapd dovecot-pop3d
+
+    Stop the Dovecot service:
+
+    sudo systemctl stop dovecot
+
+    Edit the Dovecot configuration file:
+
+    sudo nano /etc/dovecot/dovecot.conf
+
+    Replace the contents of the file with the following:
+
+    listen = *
+    protocols = imap pop3 lmtp
+    ssl = no
+    disable_plaintext_auth = no
+    mail_location = mbox:~/mail:INBOX=/var/mail/%u
+
+    Save and exit the file.
+
+    Edit the authentication configuration file:
+
+    sudo nano /etc/dovecot/conf.d/10-auth.conf
+
+    Uncomment the following lines:
+
+    # Disable any methods that shouldn't be used for authentication.
+    #auth_mechanisms = plain login
+
+    Save and exit the file.
+
+    Restart the Dovecot service:
+
+    sudo systemctl start dovecot
+
+That's it! You have successfully installed and configured Dovecot on your Ubuntu server.
 
 
 
